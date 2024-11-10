@@ -12,8 +12,8 @@ st.title("Penguin Species Prediction")
 st.header("Enter Penguin Data")
 
 # รับข้อมูลจากผู้ใช้
-island = st.selectbox('Island', ['Torgersen', 'Biscoe', 'Dream'])
-sex = st.selectbox('Sex', ['MALE', 'FEMALE'])
+island = st.selectbox('Island', island_encoder.classes_)
+sex = st.selectbox('Sex',sex_encoder.classes_)
 culmen_length_mm = st.number_input('Culmen Length (mm)', min_value=0.0, step=0.1)
 culmen_depth_mm = st.number_input('Culmen Depth (mm)', min_value=0.0, step=0.1)
 flipper_length_mm = st.number_input('Flipper Length (mm)', min_value=0.0, step=0.1)
