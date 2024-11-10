@@ -2,8 +2,8 @@ import pickle
 import pandas as pd
 import streamlit as st
 # ฟังก์ชันทำนายประเภทของเพนกวิน
-def predict_penguin(species_features):
-    prediction = model.predict([species_features])
+def predict_penguin(prediction):
+    #prediction = model.predict([species_features])
     return species_dict[prediction[0]]  # แปลงผลลัพธ์เป็นชื่อสายพันธุ์
 # โหลดโมเดลและตัวแปลงที่บันทึกไว้
 with open('model_penguin_66130701919.pkl', 'rb') as file:
