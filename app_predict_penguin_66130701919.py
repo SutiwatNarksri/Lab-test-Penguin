@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 # โหลดโมเดลและตัวแปลงที่บันทึกไว้
-with open('/content/drive/MyDrive/!!!Workshop698-1-67/Lab-Test/model_penguin_66130701919.pkl', 'rb') as file:
+with open('model_penguin_66130701919.pkl', 'rb') as file:
     model, species_encoder, island_encoder, sex_encoder = pickle.load(file)
 
 # สร้าง UI สำหรับรับข้อมูลจากผู้ใช้
