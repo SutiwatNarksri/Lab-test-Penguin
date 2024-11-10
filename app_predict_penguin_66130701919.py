@@ -23,12 +23,12 @@ body_mass_g = st.number_input('Body Mass (g)', min_value=0, step=1)
 if st.button('Predict'):
     # เตรียมข้อมูลใหม่
     x_new = pd.DataFrame({
-        'island': [island],
+        'island': island_encoder.classes_,,
         'culmen_length_mm': [culmen_length_mm],
         'culmen_depth_mm': [culmen_depth_mm],
         'flipper_length_mm': [flipper_length_mm],
         'body_mass_g': [body_mass_g],
-        'sex': [sex]
+        'sex': sex_encoder.classes_
     })
 
     # แปลงค่า island และ sex โดยใช้ตัวแปลงที่บันทึกไว้
