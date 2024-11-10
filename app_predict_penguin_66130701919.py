@@ -35,11 +35,13 @@ if st.button('Predict'):
     x_new['island'] = island_encoder.transform(x_new['island'])
     x_new['sex'] = sex_encoder.transform(x_new['sex'])
 
+    input_data = x_new[['island','culmen_length_mm','culmen_depth_mm','flipper_length_mm','body_mass_g','sex']]
+
     # ทำนายพันธุ์เพนกวิน
-    y_pred = model.predict(x_new)
+    prediction = model.predict(input_data)
 
     # แปลงผลลัพธ์จากตัวเลขเป็นชื่อพันธุ์
-    predicted_species = species_encoder.inverse_transform(y_pred)
+    predicted_species = species_encoder.inverse_transform(prediction)
 
     # แสดงผลลัพธ์
     st.write(f"Predicted Penguin Species: {predicted_species[0]}")
