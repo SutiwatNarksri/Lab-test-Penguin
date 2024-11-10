@@ -44,4 +44,4 @@ if st.button('Predict'):
     predicted_species = species_encoder.inverse_transform(prediction)
 
     # แสดงผลลัพธ์
-    st.write(f"Predicted Penguin Species: {predicted_species[0]}")
+    st.write(f"Predicted Penguin Species: {prediction}")
