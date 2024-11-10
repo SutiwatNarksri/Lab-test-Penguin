@@ -39,9 +39,10 @@ if st.button('Predict'):
 
     # ทำนายพันธุ์เพนกวิน
     prediction = model.predict(input_data)
-
+    # สร้าง dictionary เพื่อแปลงจากผลลัพธ์ตัวเลขเป็นชื่อสายพันธุ์
+    species_dict = {0: "Adelie", 1: "Chinstrap", 2: "Gentoo"}
     # แปลงผลลัพธ์จากตัวเลขเป็นชื่อพันธุ์
-    predicted_species = species_encoder.inverse_transform(prediction)
+    predicted_species = species_dict.inverse_transform(prediction)
 
     # แสดงผลลัพธ์
     st.write(f"Predicted Penguin Species: {predicted_species}")
